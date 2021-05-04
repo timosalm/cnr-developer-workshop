@@ -3,6 +3,5 @@ name: Markdown Sample
 modules:
     activate:
     - workshop-overview
-    - setup-environment
-    - exercises/01-sample-content
+    - exercises/01-what-is-cnr
     - workshop-summary

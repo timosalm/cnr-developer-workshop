@@ -1,13 +1,15 @@
 apiVersion: training.eduk8s.io/v1alpha1
 kind: TrainingPortal
 metadata:
-  name: lab-markdown-sample
+  name: cnr-fundamentals
 spec:
   portal:
     registration:
       type: anonymous
+    ingress:
+      class: contour-external
   workshops:
-  - name: lab-markdown-sample
-    capacity: 1
+  - name: cnr-fundamentals
+    capacity: 2
     expires: 60m
     orphaned: 5m
