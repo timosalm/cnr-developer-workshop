@@ -1,10 +1,7 @@
-***Knative*** brings "serverless" experience to kubernetes. It also tries to codify common patterns and best practices for running applications while hiding away the complexity of doing that on kubernetes. It does so by providing two sets of components:
+***Cloud Native Runtimes for Tanzu*** is a set of capabilities that enables developers to leverage the power of Kubernetes for serverless use cases without first having to master the Kubernetes API. Based on the open source Knative project, Cloud Native Runtimes for Tanzu can be used by itself or in concert with other Tanzu capabilities to quickly get modern cloud native applications with event-based architectures up and running on Kubernetes, regardless of a developer’s level of experience with the platform.
 
-Serving - Request-driven compute that can scale to zero
-Eventing - Management and delivery of events
+Cloud Native Runtimes gives developers and application operators (who are sometimes the same person!) a simplified way to manipulate Kubernetes to accomplish serverless use cases through Knative. This enables developers to:
 
-In this Workshop,  we will focus primarily on the knative-serving aspects
+- Be more productive on Kubernetes, faster – Deploy, scale, access, and manage containerized workloads without writing Kubernetes manifests or other templates using Knative Serving. 
 
-At a high level ***knative-serving*** is an abstraction over the bare k8s **deployment->pod->service->ingress** model. knative allows you to ask for a ***knative-service*** with an image at the core. You will be able to provide many configurations that will/can override all the amazing opinionated defaults provided by the abstraction. 
-
-One of the key highlights of the knative-serving functionality is its scale-to-zero function where the application instances will be reduced to zero if there is no activity around on the app for a predefined amount of time. This is one of the core tenets the serverless paradigm. We will sure witness this key function on this fundamentals workshop today. 
+- Build event-based applications that span multiple workload types – Access a Knative eventing resource that can trigger Kubernetes workloads based on external events using Knative Eventing.

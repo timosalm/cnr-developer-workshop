@@ -4,4 +4,6 @@ modules:
     activate:
     - workshop-overview
     - exercises/01-what-is-cnr
+    - exercises/02-knative-serving
+    - exercises/03-try-knative-serving
     - workshop-summary
