@@ -7,4 +7,6 @@ modules:
     - exercises/02-knative-serving
     - exercises/03-try-knative-serving
     - exercises/04-more-knative-serving
+    - exercises/05-knative-eventing
+    - exercises/06-try-knative-eventing
     - workshop-summary

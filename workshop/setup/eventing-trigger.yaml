@@ -1,0 +1,13 @@
+apiVersion: eventing.knative.dev/v1 
+kind: Trigger 
+metadata: 
+  name: event-display 
+  namespace: cnr-fundamentals-w01-s001
+spec: 
+  broker: default 
+  subscriber: 
+    ref: 
+      apiVersion: serving.knative.dev/v1 
+      kind: Service 
+      name: event-display 
+      namespace: cnr-fundamentals-w01-s001

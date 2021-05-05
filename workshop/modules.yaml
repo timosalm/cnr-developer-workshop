@@ -13,6 +13,11 @@ modules:
         exit_sign: More Knative Serving 
     exercises/04-more-knative-serving:
         name: More Knative Serving
+    exercises/05-knative-eventing:
+        name: Knative Eventing
+        exit_sign: Try Knative Eventing
+    exercises/06-try-knative-eventing:
+        name: Try Knative Eventing
         exit_sign: Workshop Summary
     workshop-summary:
         name: Workshop Summary

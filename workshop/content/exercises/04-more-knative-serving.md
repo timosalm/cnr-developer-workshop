@@ -21,7 +21,7 @@ command: kn service update helloworld-go --scale-min 0 --scale-max 0
 **Set Resource Requirement Requests**
 You can set resource requests for your application using the "--request" parameter to "kn service update". Try setting a request by doing
 ```terminal:execute
-command: kn service update helloworld-go --request "cpu=100m,memory=512Mi"
+command: kn service update helloworld-go --request "cpu=50m,memory=128Mi"
 ```
 
 You can unset requests you've made previously by appending a "-" to the resource name in your request. Try removing the CPU request you just set by doing
