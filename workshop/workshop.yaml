@@ -6,4 +6,5 @@ modules:
     - exercises/01-what-is-cnr
     - exercises/02-knative-serving
     - exercises/03-try-knative-serving
+    - exercises/04-more-knative-serving
     - workshop-summary
