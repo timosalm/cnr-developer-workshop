@@ -2,7 +2,6 @@ apiVersion: sources.knative.dev/v1alpha2
 kind: PingSource 
 metadata: 
   name: test-ping-source 
-  namespace: cnr-fundamentals-w01-s001
 spec: 
   schedule: "*/1 * * * *" 
   jsonData: '{"message": "Hello Eventing!"}' 
@@ -11,4 +10,4 @@ spec:
     apiVersion: eventing.knative.dev/v1 
     kind: Broker 
     name: default 
-    namespace: cnr-fundamentals-w01-s001
+    namespace: $(session_namespace)

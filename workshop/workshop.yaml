@@ -10,3 +10,5 @@ modules:
     - exercises/05-knative-eventing
     - exercises/06-try-knative-eventing
     - workshop-summary
+    - setup/eventing-trigger
+    - setup/eventing-producer
