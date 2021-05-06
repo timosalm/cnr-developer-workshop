@@ -1,25 +1,36 @@
 apiVersion: training.eduk8s.io/v1alpha2
 kind: Workshop
 metadata:
-  name: lab-markdown-sample
+  name: cnr-fundamentals
 spec:
-  title: Markdown Sample
-  description: A sample workshop using Markdown
+  title: VMware Tanzu Cloud Native Runtimes Fundamentals
+  description: A workshop that shows users hands-on how to use Tanzu Cloud Native Runtimes
   vendor: eduk8s.io
-  difficulty: beginner
+  authors:
+  - Anand Rao 
+  - Craig Olrich 
+  difficulty: intermediate
   duration: 15m
-  url: https://github.com/eduk8s/lab-markdown-sample
+  url: https://github.com/tanzu-developer-experience/cnr-developer-workshop
   content:
     #image: quay.io/eduk8s/lab-markdown-sample:master
-    files: github.com/eduk8s/lab-markdown-sample
+#    image: honnuanand/cnr-dev-fundamentals:0.3
+#    image: quay.io/eduk8s/base-environment:master
+#    image: olrich/cnr-workshop:0.1
+    image: ghcr.io/clue2solve/knative-workshop-eduk8s:latest
+    files: github.com/colrich/cnr-developer-workshop
   session:
     namespaces:
-      budget: small
+      budget: medium
+      limits:
+        min:
+          cpu: 25m
     applications:
       terminal:
         enabled: true
         layout: split
       console:
         enabled: true
+        vendor: octant
       editor:
         enabled: true

@@ -3,6 +3,12 @@ name: Markdown Sample
 modules:
     activate:
     - workshop-overview
-    - setup-environment
-    - exercises/01-sample-content
+    - exercises/01-what-is-cnr
+    - exercises/02-knative-serving
+    - exercises/03-try-knative-serving
+    - exercises/04-more-knative-serving
+    - exercises/05-knative-eventing
+    - exercises/06-try-knative-eventing
     - workshop-summary
+    - setup/eventing-trigger
+    - setup/eventing-producer
