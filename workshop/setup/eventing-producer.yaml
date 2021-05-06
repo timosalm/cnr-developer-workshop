@@ -1,3 +1,5 @@
+#@ load("@ytt:data", "data")
+
 apiVersion: sources.knative.dev/v1alpha2 
 kind: PingSource 
 metadata: 
@@ -10,4 +12,4 @@ spec:
     apiVersion: eventing.knative.dev/v1 
     kind: Broker 
     name: default 
-    namespace: $(session_namespace)
+    namespace: #@ data.values.sessionns

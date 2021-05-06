@@ -2,3 +2,19 @@ Knative Eventing requires one infrastructure prerequisite beyond the Kubernetes 
 ```terminal:execute
 command: kubectl create -f /opt/workshop/setup/eventing-broker.yaml -n ${SESSION_NAMESPACE}
 ```
+
+
+```terminal:execute
+command: kubectl create -f /opt/workshop/setup/eventing-consumer.yaml -n ${SESSION_NAMESPACE}
+```
+
+
+
+```terminal:execute
+command: ytt --data-value sessionns=${SESSION_NAMESPACE} -f /opt/workshop/setup/eventing-producer.yaml -f /opt/workshop/setup/values.yaml | kubectl create -f-
+```
+
+
+```terminal:execute
+command: ytt --data-value sessionns=${SESSION_NAMESPACE} -f /opt/workshop/setup/eventing-trigger.yaml -f /opt/workshop/setup/values.yaml | kubectl create -f-
+```

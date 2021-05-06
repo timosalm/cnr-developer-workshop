@@ -1,3 +1,5 @@
+#@ load("@ytt:data", "data")
+
 apiVersion: eventing.knative.dev/v1 
 kind: Trigger 
 metadata: 
@@ -9,4 +11,4 @@ spec:
       apiVersion: serving.knative.dev/v1 
       kind: Service 
       name: event-display 
-      namespace: $(session_namespace)
+      namespace: #@ data.values.sessionns
