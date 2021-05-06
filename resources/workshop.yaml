@@ -18,7 +18,7 @@ spec:
 #    image: quay.io/eduk8s/base-environment:master
 #    image: olrich/cnr-workshop:0.1
     image: ghcr.io/clue2solve/knative-workshop-eduk8s:latest
-    files: github.com/colrich/cnr-developer-workshop
+    files: github.com/tanzu-developer-experience/cnr-developer-workshop
   session:
     namespaces:
       budget: medium
