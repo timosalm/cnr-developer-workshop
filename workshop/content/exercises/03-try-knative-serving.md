@@ -34,7 +34,7 @@ func main() {
 }
 ```
 This app has been compiled into a simple image that is available at 
-`gcr.io/knative-samples/helloworld-go`
+`gcr.io/knative-samples/helloworld-go`.
 
 Our cluster has the most recent version of Cloud Native Runtimes for Tanzu installed on it, and the "kn" CLI tool is available in the terminal to the right of this text. 
 
@@ -44,7 +44,7 @@ To deploy the app, execute the following command in the terminal.
 command: kn service create helloworld-go --image gcr.io/knative-samples/helloworld-go --env TARGET="Go Sample v1"
 ```
 
-To test out the app, execute the following command in the terminal.
+To test out the app after the deployment is ready to serve traffic, execute the following command in the terminal.
 ```terminal:execute
 command: curl $(kn service list  helloworld-go -o json  | jq --raw-output '.items[].status.url')
 ```
@@ -53,4 +53,4 @@ command: curl $(kn service list  helloworld-go -o json  | jq --raw-output '.item
 
 
 
-One of the key highlights of the Knative Serving functionality is its scale-to-zero function where the application instances will be reduced to zero if there is no activity around on the app for a predefined amount of time. This is one of the core tenets the serverless paradigm. We will sure witness this key function on this fundamentals workshop today. 
+One of the key highlights of the Knative Serving features is the scale-to-zero functionality where the application instances will be reduced to zero if there is no activity around on the app for a predefined amount of time. This is one of the core tenets of the serverless paradigm. We will surely witness this key functionality at this workshop.

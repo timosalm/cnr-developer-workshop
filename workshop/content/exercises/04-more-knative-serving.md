@@ -1,12 +1,12 @@
-Let's take a look at some more tasks we can accomplish using Cloud Native Runtimes for Tanzu and the "kn" CLI.
+Let's take a closer look at some of the functionalities of Cloud Native Runtimes for Tanzu and the "kn" CLI.
 
 To interact with the service we just deployed, we'll use "kn service update". To get an overview of the operations you can perform, try 
 ```terminal:execute
 command: kn service update --help
 ```
 
-**Set Scaling Limits**
-You can set the minimum and maximum number of replicas of your application using the "--scale-min" and "--scale-max" parameters to "kn service update". CNR will autoscale the number of replicas of your application between these two limits based on the number of concurrent requests that your application is receiving.
+**Set Scaling Limits.**
+You can set the minimum and maximum number of replicas of your application using the "--scale-min" and "--scale-max" parameters. CNR will autoscale the number of replicas of your application between these two limits based on the number of concurrent requests that your application is receiving.
 
 Try setting minimum and maximum scale by running
 ```terminal:execute
@@ -18,8 +18,8 @@ You can disable either scaling limit by setting it to 0. To revert the limits se
 command: kn service update helloworld-go --scale-min 0 --scale-max 0
 ```
 
-**Set Resource Requirement Requests**
-You can set resource requests for your application using the "--request" parameter to "kn service update". Try setting a request by doing
+**Set Resource Requirement Requests.**
+You can set resource requests for your application using the "--request" parameter. Try setting a request by doing
 ```terminal:execute
 command: kn service update helloworld-go --request "cpu=50m,memory=128Mi"
 ```
@@ -29,7 +29,7 @@ You can unset requests you've made previously by appending a "-" to the resource
 command: kn service update helloworld-go --request "cpu-"
 ```
 
-**Change Concurrency Limits**
+**Change Concurrency Limits.**
 You can give Knative a hard limit on the maximum number of concurrent requests that will be sent to a single instance of your application, and you can also set a target number of requests, or percentage utilization, beyond which the runtime will scale up your application. 
 
 To set a hard limit, try
@@ -52,7 +52,7 @@ command: kn service update helloworld-go --concurrency-utilization 50
 ```
 With the above, Knative will scale up your application if the average number of requests being handled across all instances is greater than 50% of the concurrency limit. In the above case with a concurrency limit of 50 and a concurrency utilization of 50%, scaling up would happen when the average number of requests being handled by all instances of your application exceeds 25.
 
-**Change the Autoscale Window**
+**Change the Autoscale Window.**
 The autoscale window is the duration of the look-back for making autoscaling decisions. The default period is 60 seconds. If no request comes in to your application during this window, it will be scaled down to 0 (or your scale-min). 
 
 Try it out by running
